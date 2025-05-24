@@ -1,14 +1,10 @@
 import streamlit as st
 import os
-from dotenv import load_dotenv
 from chatbot.data_fetcher import FootballDataFetcher
 from chatbot.intent_processor import IntentProcessor
 from chatbot.response_generator import ResponseGenerator
 from chatbot.utils import setup_logging
 import logging
-
-# Load environment variables
-load_dotenv()
 
 # Setup logging
 setup_logging()
