@@ -13,8 +13,8 @@ class ResponseGenerator:
     
     def __init__(self):
         # Google Gemini API setup
-        self.gemini_api_key = st.secrets["GEMINI_API_KEY"]
-        self.gemini_model = "gemini-1.5-flash"  # Free tier model
+        self.gemini_api_key = st.secrets["GEMINI_API_KEY"] #os.getenv("GEMINI_API_KEY")
+        self.gemini_model = "gemini-2.0-flash"  # Free tier model
         self.gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/{self.gemini_model}:generateContent"
         
         self.ai_available = bool(self.gemini_api_key)
