@@ -1,5 +1,6 @@
 # Environment variables file
 .env
+config.toml
 
 # Logs files
 logs/

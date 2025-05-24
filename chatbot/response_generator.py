@@ -4,6 +4,8 @@ import json
 from typing import Dict, List, Optional, Any
 import logging
 
+import streamlit as st
+
 logger = logging.getLogger(__name__)
 
 class ResponseGenerator:
@@ -11,7 +13,7 @@ class ResponseGenerator:
     
     def __init__(self):
         # Google Gemini API setup
-        self.gemini_api_key = os.getenv('GEMINI_API_KEY', '')
+        self.gemini_api_key = st.secrets["GEMINI_API_KEY"]
         self.gemini_model = "gemini-1.5-flash"  # Free tier model
         self.gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/{self.gemini_model}:generateContent"
         
